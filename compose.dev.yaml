@@ -1,0 +1,6 @@
+services:
+  webapp:
+    environment:
+      - DEBUG=1
+    ports:
+      - "8000:8000"
