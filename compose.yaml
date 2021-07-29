@@ -15,12 +15,13 @@ services:
     depends_on:
       - db
     volumes:
-      - ${HOME}/.ssh:/root/.ssh
+      - ssh-config:/root/.ssh
     networks:
       - back-tier
 
 volumes:
   db-data:
+  ssh-config:
 
 networks:
   back-tier:
