@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 from django.core.validators import RegexValidator, MinValueValidator, MaxValueValidator
 from django.db.models import (
     Model,
