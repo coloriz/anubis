@@ -1,0 +1,14 @@
+.search-form {
+    max-width: 40rem;
+}
+
+.text-green {
+    color: #8ada54;
+}
+
+main {
+    background-image: url("/static/cgv/txt_cjoneTop.png");
+    background-repeat: no-repeat;
+    background-position: bottom 2em right 3em;
+    background-size: 15em;
+}

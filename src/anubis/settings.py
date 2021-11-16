@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework_api_key',
     'django_filters',
     'mine.apps.MineConfig',
+    'cgv.apps.CgvConfig',
 ]
 
 MIDDLEWARE = [
