@@ -13,32 +13,45 @@ from .models import (
 
 @register(Command)
 class CommandAdmin(ModelAdmin):
-    pass
+    list_display = ('id',)
 
 
 @register(Platform)
 class PlatformAdmin(ModelAdmin):
-    pass
+    list_display = ('id',)
 
 
 @register(Script)
 class ScriptAdmin(ModelAdmin):
-    pass
+    list_display = ('id', 'command', 'platform')
 
 
 @register(Commander)
 class CommanderAdmin(ModelAdmin):
-    pass
+    list_display = ('id', 'platform')
 
 
 @register(Room)
 class RoomAdmin(ModelAdmin):
-    pass
+    list_display = ('id', 'ac_address')
 
 
 @register(Worker)
 class WorkerAdmin(ModelAdmin):
-    pass
+    list_display = (
+        'id',
+        'enabled',
+        'mac_address',
+        'room',
+        'commander',
+        'notification',
+    )
+    list_filter = (
+        'enabled',
+        'room',
+        'commander',
+        'notification',
+    )
 
 
 @register(Job)

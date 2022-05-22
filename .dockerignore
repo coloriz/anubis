@@ -1,0 +1,6 @@
+/venv
+.gitignore
+.tool-verions
+compose.yaml
+compose.dev.yaml
+compose.prod.yaml

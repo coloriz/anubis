@@ -19,9 +19,15 @@ from django.utils.translation import gettext_lazy as _
 class Command(Model):
     id = CharField(max_length=16, primary_key=True)
 
+    def __str__(self):
+        return f'{self.id}'
+
 
 class Platform(Model):
     id = CharField(max_length=16, primary_key=True)
+
+    def __str__(self):
+        return f'{self.id}'
 
 
 class Script(Model):
@@ -43,6 +49,9 @@ class Commander(Model):
     platform = ForeignKey(Platform, on_delete=CASCADE, related_name='commanders')
     args_fmt = CharField(max_length=255, default='ssh -T {id} {script}')
     supported_commands = ManyToManyField(Command, related_name='commanders')
+
+    def __str__(self):
+        return f'{self.id}'
 
 
 class Room(Model):

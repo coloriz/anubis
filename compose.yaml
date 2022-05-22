@@ -9,9 +9,10 @@ services:
       - POSTGRES_PASSWORD=postgres
     networks:
       - back-tier
+    restart: unless-stopped
   webapp:
     image: anubis/webapp
-    build: ./src
+    build: .
     depends_on:
       - db
     volumes:
