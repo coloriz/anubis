@@ -61,6 +61,9 @@ class Room(Model):
     class Meta:
         ordering = ['id']
 
+    def __str__(self):
+        return f'{self.id}'
+
 
 class Worker(Model):
     id = CharField(max_length=32, primary_key=True)
@@ -72,6 +75,9 @@ class Worker(Model):
 
     class Meta:
         ordering = ['id']
+
+    def __str__(self):
+        return f'{self.id}'
 
 
 class Job(Model):
